@@ -1,0 +1,98 @@
+﻿<link href="~/Content/custom/formsubmit.css" rel="stylesheet" />
+
+<div class="container">
+    <form role="form" id="addForm" method="post">
+        <h2>Request for Whom it may concern Certificates</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="employeeid">Employee Id</label>
+                    <input type="text" name="eid" class="form-control" placeholder="" id="eid">
+                </div>
+            </div>
+            <!--  col-md-6   -->
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="" id="name">
+                </div>
+            </div>
+            <!--  col-md-6   -->
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="idbarahno">Idbarahno</label>
+                    <input type="text" name="idbarahno" class="form-control" placeholder="" id="idbarahno">
+                </div>
+
+
+            </div>
+            <!--  col-md-6   -->
+
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="text" name="email" class="form-control" id="email" placeholder="Email">
+                </div>
+            </div>
+            <!--  col-md-6   -->
+        </div>
+        <!--  row   -->
+
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label for="unifiednumber">Unified number</label>
+                    <input type="text" name="unifiednumber" class="form-control" id="unifiednumber" placeholder="Unified number">
+                </div>
+            </div>
+            <!--  col-md-6   -->
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="mobileno">Mobile number</label>
+                    <input type="text" name="mobile" class="form-control" id="mobileno" placeholder="Mobile number">
+                </div>
+
+            </div>
+            <!--  col-md-6   -->
+        </div>
+        <!--  row   -->
+
+        <button name="submit" id="submit" value="" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="successModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Form submission</h4>
+            </div>
+            <div class="modal-body">
+                <p id="responseMessage">Form has been updated successfully</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts {
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="~/Scripts/custom/formsubmit.js"></script>
+}
