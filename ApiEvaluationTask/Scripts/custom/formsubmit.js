@@ -1,5 +1,6 @@
 ﻿
 $(document).ready(function () {
+    $('.home-link').show();
     $("#addForm").validate({
         rules: {
             eid: {
@@ -50,13 +51,13 @@ $(document).ready(function () {
         submitHandler: function (form) {
 
             $.ajax({
-                url: "https://api.qa.mrhe.gov.ae/mrhecloud/v1.4/api/iskan/v1/certificates/towhomitmayconcern",
+                url: formurl,
                 type: 'POST',
                 dataType: 'json',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
-                    'consumer-key': 'mobile_dev',
-                    'consumer-secret': '20891a1b4504ddc33d42501f9c8d2215fbe85008'
+                    'consumer-key': consumerkey,
+                    'consumer-secret': consumersecret
                 },
                 contentType: 'application/json; charset=utf-8',
                 data: {
@@ -69,7 +70,7 @@ $(document).ready(function () {
                 },
                 success: function (result) {
                     if (result.success == true) {
-                        $('#responseMessage').text('Form has been updated successfully')
+                        $('#responseMessage').text('Form has been updated successfully');
                         $('#successModal').modal('show');
                         $("#addForm")[0].reset();
 
@@ -85,7 +86,7 @@ $(document).ready(function () {
 
                 },
                 error: function (error) {
-                    $('#responseMessage').text(error)
+                    $('#responseMessage').text(error);
                     $('#successModal').modal('show');
                 }
 

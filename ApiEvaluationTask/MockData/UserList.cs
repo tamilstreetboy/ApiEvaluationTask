@@ -13,8 +13,18 @@ namespace ApiEvaluationTask.MockData
         {
             userLoginViewModels.Add(new UserLoginViewModel
             {
-                Email = "user1@gmail.com",
-                Password = "user@123"
+                Email = "test1@gmail.com",
+                Password = "test123"
+            });
+            userLoginViewModels.Add(new UserLoginViewModel
+            {
+                Email = "test2@gmail.com",
+                Password = "test123"
+            });
+            userLoginViewModels.Add(new UserLoginViewModel
+            {
+                Email = "test3@gmail.com",
+                Password = "test123"
             });
         }
         public List<UserLoginViewModel> GetUsers()

@@ -19,9 +19,10 @@
                 @Html.ActionLink("Tech Evaluation Task", "News", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav  home-link">
                     <li>@Html.ActionLink("RequestToWhomItMayConcern", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("News", "News", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Log out", "Logout", "Login", new { area = "" }, null)</li>
 
                 </ul>
             </div>
@@ -38,5 +39,13 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        $('.home-link').hide();
+        var consumerkey = '@System.Configuration.ConfigurationManager.AppSettings["consumer-key"]';
+        var consumersecret = '@System.Configuration.ConfigurationManager.AppSettings["consumer-secret"]';
+        var newsurl = '@System.Configuration.ConfigurationManager.AppSettings["news-url"]';
+        var formurl = '@System.Configuration.ConfigurationManager.AppSettings["form-url"]';
+
+    </script>
 </body>
 </html>

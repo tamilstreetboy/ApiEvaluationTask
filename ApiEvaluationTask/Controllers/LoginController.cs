@@ -47,5 +47,10 @@ namespace ApiEvaluationTask.Controllers
             return View("Index");
 
         }
+        public ActionResult Logout()
+        {
+            Session.RemoveAll();
+            return RedirectToAction("Index", "Login");
+        }
     }
 }
