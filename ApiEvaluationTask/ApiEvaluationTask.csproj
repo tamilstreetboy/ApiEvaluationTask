@@ -169,6 +169,7 @@
     <Compile Include="MockData\IUserList.cs" />
     <Compile Include="MockData\UserList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ClientSecretViewModel.cs" />
     <Compile Include="ViewModels\UserLoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

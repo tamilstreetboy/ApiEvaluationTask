@@ -41,8 +41,6 @@
     @RenderSection("scripts", required: false)
     <script type="text/javascript">
         $('.home-link').hide();
-        var consumerkey = '@System.Configuration.ConfigurationManager.AppSettings["consumer-key"]';
-        var consumersecret = '@System.Configuration.ConfigurationManager.AppSettings["consumer-secret"]';
         var newsurl = '@System.Configuration.ConfigurationManager.AppSettings["news-url"]';
         var formurl = '@System.Configuration.ConfigurationManager.AppSettings["form-url"]';
 

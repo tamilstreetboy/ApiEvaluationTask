@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApiEvaluationTask.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -46,5 +47,14 @@ namespace ApiEvaluationTask.Controllers
             }
             
         }
+        [HttpGet]
+        public JsonResult GetClientSecret()
+        {
+            ClientSecretViewModel clientSecret = new ClientSecretViewModel();
+            clientSecret.ClientCode = System.Configuration.ConfigurationManager.AppSettings["consumer-key"];
+            clientSecret.ClientSecret = System.Configuration.ConfigurationManager.AppSettings["consumer-secret"];
+            return Json(clientSecret, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }
