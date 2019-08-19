@@ -2,7 +2,7 @@
     $('.home-link').show();
     $.ajax({
         url: newsurl,
-        async: true,
+        async: false,
         type: 'GET',
         dataType: 'json',
         headers: {
@@ -18,9 +18,10 @@
                 $("#loading-image").hide();
                 if (result.payload.length > 0) {
                     for (var i = 0; i < result.payload.length; i++) {
-                        $("#news").append("<hr/><div class='media'><a class='pull-left' href = '#'><img class='media-object item' src=" + result.payload[i].image + "></a><div class='media- body'><h4 class='media-heading'>" + result.payload[i].title + "</h4><p>" + result.payload[i].description + "</p><span><i class='glyphicon glyphicon-calendar'></i> " + result.payload[i].date + "</span></div>");
+                        $("#news").append("<li><hr/><div class='media'><a class='pull-left' href = '#'><img class='media-object item' src=" + result.payload[i].image + "></a><div class='media- body'><h4 class='media-heading'>" + result.payload[i].title + "</h4><p>" + result.payload[i].description + "</p><span><i class='glyphicon glyphicon-calendar'></i> " + result.payload[i].date + "</span></div></li>");
                     }
                 }
+                $('#news').paginate();
             }
         },
         error: function (error) {

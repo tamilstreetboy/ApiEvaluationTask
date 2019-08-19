@@ -4,21 +4,15 @@
 }
 
 <link href="~/Content/custom/news.css" rel="stylesheet" />
+<link href="~/Content/custom/paginate.css" rel="stylesheet" />
 <h2>News</h2>
-<div class="panel panel-default">
-
-    <img id="loading-image" src="~/images/ajax-loader.gif" style="display:none;" />
-
-    <div class="panel-heading">News</div>
-    <div class="row">
-        <div class="panel-body" style="overflow-y: scroll; height: 350px">
-            <div id="news">
-
-            </div>
-        </div>
+<div class="row">
+    <div class="container">
+        <img id="loading-image" src="~/images/ajax-loader.gif" style="display:none;" />
+        <ul id="news"></ul>
     </div>
 </div>
-
 @section scripts {
+    <script src="~/Scripts/custom/paginate.js"></script>
     <script src="~/Scripts/custom/news.js"></script>
 }
